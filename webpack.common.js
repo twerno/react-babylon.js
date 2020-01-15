@@ -6,7 +6,6 @@ module.exports = {
   entry: [
     './src/main/js/index.tsx'
   ],
-  target: 'node',
   output: {
     filename: 'app.js',
     chunkFilename: '[name].bundle.js',
@@ -52,7 +51,7 @@ module.exports = {
         {
           test: /\.ts(x?)$/, loaders: ['babel-loader', 'awesome-typescript-loader'],
           include: [
-            path.resolve('src'),
+            path.resolve('src/main/js'),
           ]
         }
       ],

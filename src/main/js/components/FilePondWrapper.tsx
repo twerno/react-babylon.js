@@ -2,13 +2,13 @@ import './filePondWrapper.css';
 import 'filepond/dist/filepond.min.css';
 
 import * as React from 'react';
-import { File as PondFile, FilePond, registerPlugin } from 'react-filepond';
+import { File as PondFile, FilePond } from 'react-filepond';
 
 // tslint:disable-next-line:no-var-requires
 const filePondPluginFileValidateType = require('filepond-plugin-file-validate-type');
 
 // Register the plugin
-registerPlugin(filePondPluginFileValidateType.default);
+// registerPlugin(filePondPluginFileValidateType.default);
 
 export interface IFilePondWrapperProps {
     processFile(fieldName: string, file: any, abort: () => void): Promise<string>;

@@ -10,9 +10,11 @@ export interface IPartMeshDemoPageProps {
     meshOptions?: IMeshOptions;
 }
 
-export const PartMeshDemoPage: React.FC<IPartMeshDemoPageProps> = (props) => (
+const PartMeshDemoPage: React.FC<IPartMeshDemoPageProps> = (props) => (
     <MeshRendrer meshData={mesh2} meshOptions={props.meshOptions} />
 );
+
+export default PartMeshDemoPage;
 
 routeMeshOptionsMap[Path.partMeshDemoPath] = [
     { action: 'showAxis', icon: 'fas fa-map' },

@@ -7,12 +7,14 @@ export interface ISphereDemoPageProps {
 
 }
 
-export const SphereDemoPage: React.FC<ISphereDemoPageProps> = (props) => (
+const SphereDemoPage: React.FC<ISphereDemoPageProps> = (props) => (
     <BabylonScene
         onSceneMount={onSceneMount}
         height="100vh" width="100vh"
         engineOptions={{ engineAntialiasing: true }} />
 );
+
+export default SphereDemoPage;
 
 const onSceneMount = (e: SceneEventArgs) => {
     const { canvas, scene, engine } = e;
