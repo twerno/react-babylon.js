@@ -1,0 +1,11 @@
+.topBar {
+    background-color: #234d80;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0px;
+    box-sizing: border-box;
+}

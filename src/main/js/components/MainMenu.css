@@ -1,0 +1,87 @@
+.mainMenu {}
+
+.mainMenu__menuButton {
+    box-sizing: border-box;
+
+    color: #234d80;
+    background-color: #f6f9fd;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 2px 9px;
+}
+
+.mainMenu__list {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50px;
+    left: -200px;
+    width: 200px;
+    height: calc(100% - 50px);
+
+    margin: 0px;
+    padding: 0px 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    list-style: none;
+    background-color: #8cb1df;
+    border-right: #234d80 solid 2px;
+}
+
+.mainMenu__list__element {
+    box-sizing: border-box;
+    height: 30px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-basis: 100%;
+
+    border-radius: 5px;
+    background-color: #f6f9fd;
+    color: #234d80;
+}
+
+.mainMenu__list__element--active {
+    font-weight: bold;
+}
+
+.mainMenu__list__element--active a::before {
+    content: '>';
+    padding-right: 3px;
+}
+
+.mainMenu__list__element:hover {
+    box-sizing: border-box;
+    background-color: #234d80;
+    color: #f6f9fd;
+}
+
+.mainMenu__list__element:hover a {
+    color: #f6f9fd;
+}
+
+.mainMenu__list__element__link {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+}
+
+/* ******************* */
+.mainMenu__list {
+    transition: .3s transform;
+}
+
+.mainMenu__menuButton:focus~.mainMenu__list,
+.mainMenu__list:hover {
+    transform: translateX(200px);
+}
